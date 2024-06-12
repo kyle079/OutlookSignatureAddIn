@@ -162,6 +162,7 @@ async function fetchSignatures(domainToken) {
     const config = {
         method: 'get',
         maxBodyLength: Infinity,
+        // Using custom endpoint to avoid CORS issue in local dev
         url: `https://creatioleadapi.azure-api.net/sharepoint/ListDomainToken?domaintoken=${domainToken}&emailaddress=${emailAddress}&hostName=${hostName}&hostVersion=${hostVersion}&manifestVersion=${manifestVersion}`,
         headers: {
             'Accept': 'application/json',
