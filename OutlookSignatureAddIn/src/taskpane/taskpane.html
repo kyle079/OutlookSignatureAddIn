@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Signature Add-in</title>
+    <link rel="stylesheet"
+        href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/9.6.1/css/fabric.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+    <script src="taskpane.js"></script>
+    <style>
+        body {
+            padding: 20px;
+        }
+
+        .ms-TextField {
+            margin-bottom: 15px;
+        }
+
+        .ms-Button {
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .ms-Label {
+            font-weight: 600;
+        }
+
+        #signaturesList {
+            margin-top: 20px;
+        }
+
+        .signature-frame {
+            width: 100%;
+            height: 150px;
+            border: none;
+        }
+
+        #loading {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body class="ms-Fabric">
+    <div class="ms-Grid" dir="ltr">
+        <div class="ms-Grid-row">
+            <div class="ms-Grid-col ms-sm12 ms-md6 ms-lg4">
+                <div class="ms-TextField">
+                    <label class="ms-Label" for="domainTokenInput">Domain Token:</label>
+                    <input class="ms-TextField-field" type="text" id="domainTokenInput" />
+                </div>
+                <div>
+                    <button class="ms-Button ms-Button--primary" id="saveTokenButton">
+                        <span class="ms-Button-label">Save Token</span>
+                    </button>
+                </div>
+                <div>
+                    <button class="ms-Button ms-Button--primary" id="getSignaturesButton">
+                        <span class="ms-Button-label">Fetch Signatures</span>
+                    </button>
+                </div>
+                <div>
+                    <button class="ms-Button ms-Button--primary" id="clearCacheButton">
+                        <span class="ms-Button-label">Clear Cache</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="ms-Grid-row">
+            <div class="ms-Grid-col ms-sm12">
+                <div id="loading" class="ms-Label">Loading Signatures...</div>
+                <div id="resultMessage" class="ms-Label"></div>
+                <div id="signaturesList"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
