@@ -11,6 +11,7 @@ Office.onReady((info) => {
 });
 
 function refreshSignatures() {
+    getSignatures();
     setInterval(getSignatures, 1000 * 60 * 30); // Refresh every 30 minutes
 }
 
