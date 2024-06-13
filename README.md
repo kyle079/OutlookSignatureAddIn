@@ -7,3 +7,5 @@ Able to load signatures from Xink and store them in the local browser DB for lat
 Can only be access from the reading pane.
 
 Domain Token must be entered and saved on first use.
+
+Uses a custom API endpoint as a relay to Xink to avoid issues with CORS in local Dev, this applies the CORS policy to allow connection from localhost:3000
