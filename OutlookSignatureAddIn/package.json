@@ -28,7 +28,7 @@
     "watch": "webpack --mode development --watch"
   },
   "dependencies": {
-    "axios": "^1.7.2",
+    "axios": "^1.13.5",
     "core-js": "^3.37.1",
     "regenerator-runtime": "^0.14.1"
   },
